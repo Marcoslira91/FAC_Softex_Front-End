@@ -1,1 +1,9 @@
+let num1 = [];
+let num2 = [];
 
+for (let i = 0; i < 10; i++) {
+     const valorRecebido = parseFloat(prompt("Digite o valor: "));
+     num1[i] = valorRecebido;
+} 
+num2 = num1;
+alert(num1 + '' +num2);
