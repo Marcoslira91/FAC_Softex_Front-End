@@ -1,91 +1,262 @@
-<!DOCTYPE html> <!--Define o tipo ed documento HTML5-->
-<html lang="pt-BR"> <!--Tag principal de página-->
-<head><!--Define os meta dados dos documentos-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
     <meta charset="UTF-8">
-    <meta name="application-name" content="Fronteend">
-    <meta name="keywords" content="HTML, CSS, JavaScript, Fronteend">
-    <meta name="author" content="Marcos Lira">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Primeira pagina da turma de front end">
-    <title>Bolo Red Velvet</title>
+    <meta name="application-name" content="Recife Antigo">
+    <meta name="author" content="Marcos Lira">
+    <meta name="description" content="A história do Recife Antigo">
+    <meta name="keywords" content="história, Recife, Antigo">
+    <meta name="color-scheme" content="dark light">
+    <title>Recife Antigo</title>
 
-    <style media="all" type="text/css">
-        h3 {color: #d3d3d3;}
+    <style>
+        html {
+            background-color: #3a3838
+        }
+
+        :root {
+            --main-color: rgb(54,54,54);
+            --hover-color: rgb(0, 0, 0);
+            --letter-color: rgb(79,79,79);
+            --text-font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            border-radius: 25px;
+            min-width: 70vw;
+            max-width: 85vw;
+            margin: -1px auto 10px;
+            border: 1px solid #ddd;
+            background-color: #FFF;
+            font-family: var(--text-font-family);
+        }
+
+        header {
+            width: inherit;
+            height: inherit
+        }
+
+        nav {
+            width: inherit;
+            background-color: var(--main-color)
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+
+        nav ul li a {
+            font-size: 0.85em;
+            text-decoration: none;
+            color: #FFF;
+            padding: 4px 20px
+        }
+
+        nav ul li a:hover {
+            background-color: var(--hover-color)
+        }
+
+        article {
+            float: left;
+            margin: 30px 20px;
+            width: 60%;
+            min-width: 40vw;
+            text-align: justify;
+        }
+
+        article header hgroup h1 {
+            margin: 10;
+        }
+
+        article header hgroup h5 {
+            margin: 5px;
+            font-size: 1.1em;
+            color: #ccc;
+            font-weight: 100;
+        }
+
+        aside {
+            float: left;
+            width: 40%;
+            border-top: 1px solid var(--letter-color);
+            border-bottom: 1px solid var(--letter-color);
+            padding: 40px 10px 0;
+            font-style: italic;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        aside p {
+            color: #000000;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        #apoio {
+            float: right;
+            width: 280px;
+            margin-top: 30px;
+            margin-right: 30px;
+        }
+
+        footer {
+            border-radius: 25px;
+            clear: both;
+            width: inherit;
+            margin: 0 auto;
+            font-size: 0.75em;
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        h4 {
+            font-family: var(--text-font-family);
+            color: var(--letter-color);
+            font-style: italic;
+            letter-spacing: -0.05em
+        }
+
+        h1 {
+            font-size: 2.6em;
+            margin: 0 5px;
+        }
+
+        h4 {
+            font-size: 1.6em;
+            margin: 0 5px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        p,
+        li {
+            font-family: var(--text-font-family);
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        @media (max-width:1050px) {
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            article {
+                width: 90%;
+                align-items: center;
+            }
+
+            aside {
+                width: 90%;
+            }
+
+            #apoio {
+                float: left;
+                width: 90%;
+                margin-left: 20%;
+                margin-bottom: 30px;
+            }
+        }
     </style>
 
-    <link rel="icon" href="Imagem/icon.png"/>
 </head>
-<body> <!--Define o corpo do documento ou conteudo da página-->
-    <main><!--Especifica o conteúdo principal de um documento-->
-        <title title="Receitas">Bolo Red Velvet</title>
-        <img 
-            src="20210916104421-blog_bolo_header-1.png" 
-            alt="Cake with a very light and soft texture, 
-            slightly buttered and with a discreet chocolate flavor. 
-            Its dough is red in color, which contrasts with the white cream cheese in the 
-            filling and topping."/>
-        <h1>Bolo Red Velvet</h1>
-        <nav>
-        <h2>Ingredientes</h2>
-        <h3>Massa</h3>
-            <ul>
-                <li>1 xícara e meia (chá) de Leite Líquido NINHO® Forti+ Integral</li>
-                <li>1 colher (sopa) de suco de limão</li>
-                <li>xícara (chá) de manteiga sem sal em temperatura ambiente</li>
-                <li>1 xícara e meia (chá) de açúcar</li>
-                <li>3 ovos</li>
-                <li>1 colher (sopa) de essência de baunilha</li>
-                <li>1 xícara e meia (chá) de farinha de trigo</li>
-                <li>1 colher (sopa) de Chocolate em Pó 50% NESTLÉ® DOIS FRADES</li>
-                <li>1 colher e meia (sopa) de fermento em pó</li>
-                <li>1 colher (chá) de corante líquido vermelho</li>
+<body>
+    <main> <!--Define o conteúdo principal dentro do <body>-->
+        <header><!--Grupo de suporte introdutório | Cabeçalho-->
+            <h1 class="title">Recife</h1><!--Titulo-->
+        </header>
+
+        <nav><!--Seção de uma página que aponta para outras páginas ou para outras áreas da página-->
+            <ul><!--Lista de itens sem ordem rígida-->
+                <li><a href="">História</a></li>
+                <li><a href="">Turismo</a></li>
+                <li><a href="">O que fazer</a></li>
+                <li><a href="">Localização</a></li>
             </ul>
-        <h3>Recheio e Cobertura</h3>
-            <ul>
-                <li>2 xícaras (chá) de cream cheese (450 g)</li>
-                <li>meia xícara (chá) de manteiga sem sal em temperatura ambiente</li>
-                <li>1 colher (sopa) de essência de baunilha</li>
-                <li>1 xícara e meia (chá) de açúcar de confeiteiro peneirad</li>            
-            </ul>       
         </nav>
-        <article>
-            <section>
-                <h2>Modo de Preparo</h2>
-                <h3>Massa</h3>
-                    <ol>
-                        <li>Em um recipiente, misture o Leite NINHO com o suco de limão. Reserve até talhar.</li>
-                        <li>Em uma batedeira, bata a manteiga com o açúcar até obter uma mistura esbranquiçada.</li>
-                        <li>Com a batedeira ligada, adicione os ovos, um a um. Acrescente a baunilha e bata.</li>
-                        <li>Em um recipiente, peneire a farinha de trigo, o Chocolate em Pó NESTLÉ e o fermento.</li>
-                        <li>Com a batedeira ligada em velocidade baixa, vá intercalando a adição do leite com o suco de limão e dos ingredientes secos peneirados.</li>
-                        <li>Adicione o corante e misture bem. A cor da massa deve ficar bem vermelha, se necessário, adicione mais corante.</li>
-                        <li>Despeje a mistura em três formas redondas (20 cm de diâmetro) forrada com papel manteiga no fundo e laterais e leve para assar em forno médio (180°C) preaquecido, por cerca de 50 minutos.</li>
-                    </ol>
-                <h3>Recheio e Cobertura</h3>
-                    <ol>
-                        <li>Em uma batedeira, bata o cream cheese com a manteiga até obter um creme bem liso.</li>
-                        <li>Adicione a essência de baunilha e bata.</li>
-                        <li>Adicione o açúcar de confeiteiro e bata bem. Reserve em geladeira.</li>
-                    </ol>
+
+        <article><!--Composição independente em um documento | Um artigo-->
+            <header>
+                <hgroup><!--Container para um conjunto de elementos | Cabeçalhos-->
+                    <h1>Recife</h1>
+                    <h5>Suas histórias e seus encantos</h5>
+                </hgroup>
+            </header>
+
+            <p>A origem do Recife remonta à terceira década do Século XVI, quando era uma estreita faixa de areia protegida por uma 
+                linha de arrecifes que formava um ancoradouro. Devido as suas características físicas favoráveis, o local passou a 
+                abrigar um porto. E no entorno dele, que servia a Vila de Olinda, formou-se um povoado com cerca de 200 habitantes, 
+                em sua maioria, marinheiros, carregadores e pescadores. O assentamento ocupava a península correspondente ao que é 
+                hoje o Bairro do Recife.</p>
+            
+            <aside>
+                <p>
+                    Recife, mais conhecido como Recife Antigo, é um bairro da cidade do Recife, Pernambuco, Brasil que corresponde à 
+                    parte leste do seu Centro Histórico.
+                    Em seu ponto mais oriental, no Porto do Recife, situa-se a Praça Rio Branco – o Marco Zero, margeada pelo encontro 
+                    dos rios Capibaribe e Beberibe com o Oceano Atlântico.
+                </p>
+            </aside>
+
+            <p>
+                Inicialmente o bairro era denominado Arrecife dos Navios e se estendia, desordenadamente, por uma área de aproximadamente
+                dez hectares, com a construção das casas não seguindo nenhum ordenamento: a abertura de ruas obedecia apenas à vontade dos 
+                que ali se fixavam.
+            </p>
+            
+            <p>
+                Só durante o domínio holandês, precisamente com a chegada do conde Maurício de Nassau a Pernambuco (1637), é que o 
+                bairro passou a ter algum planejamento. Nessa época, eram 15 ruas e uma praça. Por conta da movimentação do porto, 
+                o povoado logo se tornaria bastante habitado. Em 1654, por exemplo, quando os holandeses deixaram Pernambuco, o hoje 
+                bairro do Recife já contava com trezentos prédios - entre os quais a Casa da Câmara, a Igreja do Corpo Santo, a Cadeia 
+                e vários Armazéns.
+            </p>
+
+            <h4>Turismo</h4>
+            <ul>
+                <li>Marco Zero</li>
+                <li>Capela Dourada</li>
+                <li>Oficina de Cerâmica Francisco Brennand</li>
+                <li>Forte das Cinco Pontas</li>
+                <li>Praia de Boa Viagem</li>
+            </ul>
+
+            <h4>O que fazer</h4>
+            <ul>
+                <li>Excursão a Porto de Galinhas</li>
+                <li>Excursão à praia dos Carneiros</li>
+                <li>Tour pelo Recife e Olinda</li>
+                <li>Excursão às praias de Cabo Santo Agostinho</li>
+            </ul>
+        </article>
+
+        <div id="apoio">
+            <section class="fotos_apoio">
+                <h2>Localização</h2>
+                <img src="../Ponto-Turisticos/img/bairro-recife-antigo.png" width="275" height="299"/>
             </section>
-            <section>
-                <h4>
-                    <p>O que o mundo fala sobre o Bolo Red Velvet</p>
-                    <blockquote cite="https://encurtador.com.br/iADHL">
-                        Chef Elizângela Aldá ensinou o passo a passo da receita e explicou a origem do doce.
-                    </blockquote>
-                    <a href="https://encurtador.com.br/iADHL">Confira no site!</a>
-                </h4>
+
+            <section class="fotos_apoio">
+                <h2>Principais pratos</h2>
+                <img src="../Ponto-Turisticos/img/bolo-de-rolo-para-vender.jpg" width="275" height="205" />
             </section>
-        </article>    
-        <aside>
-            <h1>Você conhece a história do Red Velvet?</h1>
-            <p>A origem do Red Velvet é cheia de imprecisões. Mas vamos à certeza. “A ‘família’ de bolos à qual ele pertence, a dos <b>velvet</b>, ou <b>aveludados</b>, existe desde 1800, com primeiros registros depois da guerra civil americana. É uma massa bem leve e sequinha, que leva vinagre e leitelho (buttermilk) na receita. Era comum em sabores como abacaxi e limão.</p>
-            <p>Segundo ele, foi no século 20, surgiu o Red Velvet, que já tinha uma cor avermelhada por conta da reação dos ingredientes ácidos. Devido a quebra da bolsa de Nova Iorque em 1929, chocolate estava em falta, outra opção seria ferver a beterraba e colorir, até porque comprar corante artificial naquela época era muito caro.</p>
-        </aside>
-        <footer>
-            @Marcoslira91
-        </footer>
+        </div>
+
+        <footer>Recife - Bairro do Recife, Recife/PE</footer>
     </main>
 </body>
 </html>
